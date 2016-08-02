@@ -1,0 +1,16 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script>
+    (function() {
+      var results = /access_token=(.+)&?/g.exec(window.location.href)
+      if (!results || !results[1]) return null
+
+      window.location.replace("https://igncp.github.io/vibes/?access_token=" + results[1])
+    })()
+  </script>
+</head>
+<body>
+</body>
+</html>
